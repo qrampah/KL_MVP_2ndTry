@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kargoline MVP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'kargo-dark-blue': '#0A2533', // A custom dark blue-gray
+            'kargo-teal': '#00A99D',      // A vibrant teal
+            'kargo-light-teal': '#E0F2F1', // For backgrounds or subtle highlights
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'], // Using a common clean font
+          },
+          keyframes: {
+            'slide-in': {
+              '0%': { transform: 'translateY(-100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            'slide-out': {
+              '0%': { transform: 'translateY(0)', opacity: '1' },
+              '100%': { transform: 'translateY(-100%)', opacity: '0' },
+            }
+          },
+          animation: {
+            'slide-in': 'slide-in 0.5s ease-out forwards',
+            'slide-out': 'slide-out 0.5s ease-in forwards',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .truck-marker {
+      transition: all 1.5s ease-in-out;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-transition-group": "https://esm.sh/react-transition-group@4.4.5",
+    "react-transition-group/": "https://esm.sh/react-transition-group@4.4.5/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-900 text-gray-100">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

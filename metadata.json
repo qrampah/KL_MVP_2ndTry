@@ -1,0 +1,8 @@
+{
+  "name": "Kargoline MVP1 - On-Demand Logistics",
+  "description": "An MVP for Kargoline, an on-demand logistics platform connecting users needing to move bulky goods with truck owners/drivers in the U.S. This version focuses on user authentication and profile management.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": ""
+}
