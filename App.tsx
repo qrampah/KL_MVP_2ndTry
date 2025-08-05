@@ -6,7 +6,7 @@ import { NotificationProvider } from './contexts/NotificationContext';
 import { useAuth } from './hooks/useAuth';
 import Navbar from './components/layout/Navbar';
 import Spinner from './components/ui/Spinner';
-import NotificationContainer from './components/ui/NotificationContainer';
+import NotificationModal from './src/components/NotificationModal';
 import { UserRole } from './types';
 
 // Statically import pages to fix module resolution error with lazy loading in this environment.
@@ -82,7 +82,7 @@ const App: React.FC = () => {
           <HashRouter>
             <div className="flex flex-col min-h-screen bg-slate-900">
               <Navbar />
-              <NotificationContainer />
+              <NotificationModal />
               <main className="flex-grow">
                 <AppRoutes />
               </main>
